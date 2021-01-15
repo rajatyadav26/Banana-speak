@@ -2,10 +2,31 @@ var btnTranslate = document.querySelector("#btn-translate");
 var textInput = document.querySelector("#text-input");
 var divOutput = document.querySelector("#output");
 
-console.log(textInput);
+//var urlTranslate = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+
+var urlTranslate = "https: //api.funtranslations.com/translate/minion.json"
+
+function translationUrl(text) {
+    return urlTranslate + "?" + "text=" + text
+};
+
+function errorHandler(error) {
+    console.log("error occured", error);
+    alert("Something went wrong! Try again after some time ");
+}
 
 function clickHandler() {
-    divOutput.innerText = "mojo jojo " + textInput.value;
+    var inputText = textInput.value; //input
+
+    //calling server for response
+
+    fetch(translationUrl(inputText))
+        .then(response => response.json())
+        .then(json => {
+            var translatedText = json.contents.translated;
+            divOutp.innerText = translatedText // output
+        })
+        .catch(errorHandler);
 };
 
 btnTranslate.addEventListener("click", clickHandler)
