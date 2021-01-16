@@ -4,16 +4,16 @@ var divOutput = document.querySelector("#output");
 
 //var urlTranslate = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
 
-var urlTranslate = "https: //api.funtranslations.com/translate/minion.json"
+var urlTranslate = "https://api.funtranslations.com/translate/minion.json";
 
 function translationUrl(text) {
     return urlTranslate + "?" + "text=" + text
 };
 
-function errorHandler(error) {
+/*function errorHandler(error) {
     console.log("error occured", error);
     alert("Something went wrong! Try again after some time ");
-}
+}*/
 
 function clickHandler() {
     var inputText = textInput.value; //input
@@ -24,9 +24,9 @@ function clickHandler() {
         .then(response => response.json())
         .then(json => {
             var translatedText = json.contents.translated;
-            divOutp.innerText = translatedText // output
+            divOutput.innerText = translatedText // output
         })
-        .catch(errorHandler);
+        //.catch(errorHandler);
 };
 
 btnTranslate.addEventListener("click", clickHandler)

@@ -1,12 +1,70 @@
+body {
+    margin: 0px;
+    font-size: large;
+    overflow: auto;
+    position: relative;
+}
+
+//===================
+nav {
+    text-align: center;
+}
+
+//================
+.description {
+    background-color: yellow;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer {
+    bottom: 0;
+    overflow-x: hidden;
+}
+
+.footer .footer-about {
+    margin: 2rem;
+}
+
+#text-input {
+    max-width: 600px;
+    height: 500px;
+}
+
+#btn-translate {
+    margin: 1rem;
+    padding: 0.5rem 2.5rem;
+}
+
+.output-headline {
+    margin: 1.5rem;
+}
+
+#id {
+    margin: 1rem;
+}
+
+.content {
+    padding: 2rem;
+}
+
 #text-input {
     border: 2px solid black;
     height: 10vh;
     display: block;
     width: 500px;
+    margin: auto;
 }
 
 #output {
     border: 2px solid black;
     height: 10vh;
     width: 500px;
+    margin: auto;
+}
+
+.container-center {
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
 }
