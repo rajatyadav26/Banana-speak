@@ -6,7 +6,7 @@
 :root {
     --primary: #F9A8D4;
     --black: #333333;
-    --width-break: 600px;
+    --width-break: 600px
 }
 
 body {
@@ -27,11 +27,11 @@ section {
     max-width: var(--width-break);
 }
 
-text-area {
+#text-input {
     box-sizing: border-box;
     display: block;
-    width: 350px;
-    min-height: 20vh;
+    width: 100%;
+    min-height: 10vh;
     margin-top: 2rem;
     font-size: large;
     font-family: inherit;
