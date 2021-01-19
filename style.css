@@ -4,77 +4,74 @@
 }
 
 :root {
-    --primary-color: #F9A8D4;
-    --width-break: 600px
+    --primary: #F9A8D4;
+    --black: #333333;
+    --width-break: 600px;
 }
 
 body {
-    margin: 0px;
-    font-family: 'Caveat', cursive;
+    margin: 0;
+    font-family: 'Kalam', cursive;
+    color: #333333;
 }
 
 header {
+    background-color: var(--primary);
     text-align: center;
-    background-color: var(--primary-color);
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
-footer {
-    text-align: center;
-    background-color: var(--primary-color);
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    padding: 1rem;
-    font-size: 18px;
-    font-weight: bolder;
-}
-
-footer p {
-    max-width: 600px;
+section {
     margin: auto;
-}
-
-.content {
-    margin: auto;
-    max-width: 600px;
     padding: 1rem;
-    margin-bottom: 1rem;
+    max-width: var(--width-break);
 }
 
-.output-headline {
-    margin: 1rem 0rem;
-    font-weight: bold;
-    font-size: x-large;
-}
-
-textarea {
+text-area {
     box-sizing: border-box;
     display: block;
-    font-size: x-large;
-    font-weight: bold;
-    min-height: 20vh;
-    margin: 1rem 0rem;
     width: 100%;
+    width: 350px;
+    min-height: 20vh;
+    margin-top: 2rem;
+    font-size: large;
+    font-family: inherit;
+}
+
+button {
+    background-color: var(--primary);
+    border: none;
+    margin: 1rem 0rem;
+    padding: 1rem 2rem;
+    font-family: 'Kalam', cursive;
+    font-size: large;
+    display: block;
 }
 
 #output {
     box-sizing: border-box;
-    border: 1px solid black;
     width: 100%;
     min-height: 10vh;
-    max-height: 30vh;
-    width: 100%;
-    margin: 1rem 0rem;
-    font-weight: bolder;
+    max-height: 20vh;
     overflow: scroll;
+    border: 1px solid var(--black);
 }
 
-#btn-translate {
-    background-color: var(--primary-color);
-    margin: 1rem 0rem;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--primary);
+    text-align: center;
+}
+
+footer p {
+    max-width: var(--width-break);
+    margin: auto;
+    width: 1200px;
+}
+
+.footer-heading {
+    font-size: x-large;
 }
