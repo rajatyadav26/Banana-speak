@@ -30,7 +30,6 @@ section {
 text-area {
     box-sizing: border-box;
     display: block;
-    width: 100%;
     width: 350px;
     min-height: 20vh;
     margin-top: 2rem;
@@ -69,7 +68,7 @@ footer {
 footer p {
     max-width: var(--width-break);
     margin: auto;
-    width: 1200px;
+    width: 100%auto;
 }
 
 .footer-heading {
